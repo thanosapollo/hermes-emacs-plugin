@@ -1,0 +1,18 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+*.log
+.DS_Store
+
+# Ignore markdown by default (planning/scratch notes);
+# track project docs explicitly.
+*.md
+!AGENTS.md
+!CHANGELOG.md
+!README.md
+!SECURITY.md

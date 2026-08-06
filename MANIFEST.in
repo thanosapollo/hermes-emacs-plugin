@@ -1,0 +1,4 @@
+include CHANGELOG.md
+include SECURITY.md
+include .env.example
+recursive-include examples *.yaml

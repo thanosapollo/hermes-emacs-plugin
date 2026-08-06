@@ -1,0 +1,21 @@
+mcp_servers:
+  emacs:
+    command: "/absolute/path/to/hermes-emacs-plugin/.venv/bin/python"
+    args:
+      - "-m"
+      - "hermes_emacs_plugin"
+    env:
+      # Optional. If omitted, the server also checks ~/.config/hermes-emacs-plugin/env and ./.env.
+      # Use "127.0.0.1" for same-machine Emacs or a private-network address for a remote host.
+      EMACS_EXEC_HOST: "127.0.0.1"
+      EMACS_EXEC_PORT: "8237"
+      EMACS_EXEC_TIMEOUT: "30"
+      # Tool-name prefix. Default "emacs" gives emacs_ping, emacs_execute_code, etc.
+      # Set empty to drop the prefix when the agent already names the server.
+      EMACS_MCP_TOOL_PREFIX: "emacs"
+      # EMACS_EXEC_URL: "http://127.0.0.1:8237"
+      # EMACS_EXEC_TOKEN: "shared-bearer-token-required-off-loopback"
+    timeout: 120
+    connect_timeout: 30
+    sampling:
+      enabled: false
